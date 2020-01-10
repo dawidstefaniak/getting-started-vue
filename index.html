@@ -18,16 +18,18 @@
 <script>
     var app = new Vue({
         el: '#app',
-        data: {
-            message: 'Hello Vue!',
-            currentColor: 'red'
+        data() {
+            return {
+                message: 'Hello Vue!',
+                currentColor: 'red'
+            }
         },
         methods: {
             onButtonClick(){
-                if(this.currentColor == 'red'){
+                if(this.currentColor === 'red'){
                     this.currentColor = 'blue'
                 }
-                else if (this.currentColor == 'blue'){
+                else if (this.currentColor === 'blue'){
                     this.currentColor = 'red'
                 }
             }
